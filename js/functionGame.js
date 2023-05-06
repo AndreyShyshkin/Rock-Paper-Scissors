@@ -7,10 +7,13 @@ let Opponent = document.querySelector('.Opponent');
 let rockImg = document.querySelector('.rockImg');
 let scissorsImg = document.querySelector('.scissorsImg');
 let paperImg = document.querySelector('.paperImg');
+let scoreNamber = document.querySelector('#scoreid');
 let result = document.querySelector('.result');
 
 let SelectPlayer = 0;
 let SelectOpponent = 0;
+
+let scoreUP = 0;
 
 rockBtn.onclick = function(){
     SelectPlayer = "1";
@@ -68,9 +71,13 @@ function EndGame() {
     if(SelectPlayer == SelectOpponent) {
         result.innerText = "НІЧИЯ(РЕСТАРТ)";
         }else if((SelectPlayer == 3 && SelectOpponent == 1) || (SelectPlayer == 1 && SelectOpponent == 2) || (SelectPlayer == 2 && SelectOpponent == 3)){
-        result.innerText = "ПЕРЕМОГА(РЕСТАРТ)";
+        result.innerText = "ПЕРЕМОГА(РЕСТАРТ)"; 
+        scoreUP++;
+        scoreNamber.innerText = scoreUP;
         }else {
-        result.innerText = "ПРОГРАШ(РЕСТАРТ)";
+        result.innerText = "ПРОГРАШ(РЕСТАРТ)"; 
+        scoreUP--;
+        scoreNamber.innerText = scoreUP;
         }
 }
 
