@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="main.styles.css">
+</head>
+<body>
+    <div class="score">
+    <h2>
+        ОЧОК <span id="score">0</span>
+    </h2>
+    </div>
+
+    <div class="choose">
+        <button id="rock" class="BtnChoose"><img src="./img/rock.png" alt="rock"></button>
+        <button id="scissors" class="BtnChoose"><img src="./img/scissors.png" alt="scissors"></button>
+        <button id="paper" class="BtnChoose"><img src="./img/paper.png" alt="paper"></button>
+
+        <div class="OpponentWait"><img src="./img/Rock-Paper-Scissors.jpg" alt="Rock-Paper-Scissors"><br />
+           <p>Опонент обирає <span id="timerid">3</span></p>
+        </div>
+        <div class="Opponent">
+            <img src="./img/rock.png" alt="rock" class="rockImg">
+            <img src="./img/scissors.png" alt="scissors" class="scissorsImg">
+            <img src="./img/paper.png" alt="paper" class="paperImg">
+        </div>
+            
+    </div>
+
+    <div class="result"></div>
+
+
+    <button id="rules">Правила</button>
+    <div id="modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h2>Правила<img src="./img/close.svg" alt="close" id="close"></h2>
+            <img src="./img/rules.svg" alt="rules" class="rules">
+         </div>
+    </div>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/functionGame.js"></script>
+
+</body>
+</html>
